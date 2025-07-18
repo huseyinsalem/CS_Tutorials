@@ -74,7 +74,64 @@ namespace CS_Tutorials
             }
             #endregion
 
-            
+
+
+
+
+            #region metot ve class
+
+            Console.WriteLine("----------");
+
+
+            Product product1  = new Product();
+
+            product1.Name = "-Apple";
+            product1.price = "-17";
+            product1.Description = "-Amasya Apple";
+
+
+            Product product2 = new Product();
+
+            product2.Name = "-Banana";
+            product2.price = "-21";
+            product2.Description = "-Mersin banana";
+
+            Product[] products = new Product[] { product1,product2};
+
+            foreach (Product product in products)
+            {
+                Console.WriteLine(product.Name);
+                Console.WriteLine(product.price);
+                Console.WriteLine(product.Description);
+                Console.WriteLine("---------");
+            }
+
+            Console.WriteLine("-----------------");
+
+
+
+
+           CartManager cartManager1 = new CartManager();
+
+            cartManager1.ekle(product1);
+            cartManager1.ekle(product2);
+
+
+            Console.WriteLine("--------------");
+
+            CartManager matematik = new CartManager();
+
+            matematik.toplam(5, 8);
+            matematik.toplam(7, 3);
+
+            #endregion
+
+
+
+
+
+
+
 
 
 
@@ -82,11 +139,13 @@ namespace CS_Tutorials
         }
     }
 
-
+          #region 
     class Course
     {
         public string CourseName { get; set; }
         public string InstructorName { get; set; }
-        public int ViewRate{ get; set; }
+        public int ViewRate { get; set; }
     }
+    #endregion
+   
 }
